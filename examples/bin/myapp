@@ -1,0 +1,20 @@
+#!/usr/bin/env perl
+#
+#   Usage: test-myapp --help
+#
+#   Martin Senger <martin.senger@gmail.com>
+#   March 2012
+#
+# ABSTRACT: testing command-line application
+# PODNAME: App::myapp
+# -----------------------------------------------------------------
+use warnings;
+use strict;
+package main;  # this is here to make Dist:Dzilla's PkgVersion happy
+
+use FindBin qw($Bin);
+use lib "$Bin/../lib";
+use lib 'lib';
+
+use App::myapp;
+App::myapp->run();
